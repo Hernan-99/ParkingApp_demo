@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "./components/header/header.component";
+import { HeroComponent } from "./components/hero/hero.component";
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, HeroComponent],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })
