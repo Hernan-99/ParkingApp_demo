@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+@layer {
+  body {
+    @apply bg-gradient-to-b from-black to-blue-500;
+  }
+}
