@@ -15,7 +15,7 @@ export class HeaderComponent {
     { label: 'Home', link: '/' },
     { label: 'Servicios', link: '#services' },
     { label: 'Contacto', link: '#contact' },
-    { label: 'Login', link: '#login' },
+    { label: 'Iniciar sesion', link: '#login' },
     { label: 'Registrarse', link: '#register' },
   ];
 
