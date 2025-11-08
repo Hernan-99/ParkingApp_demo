@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CardServiceComponent } from "../../components/card-service/card-service.component";
+import { TitleSectionComponent } from "../../components/title-section/title-section.component";
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CardServiceComponent],
+  imports: [CardServiceComponent, TitleSectionComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })

@@ -1,1 +1,69 @@
-<p>contact works!</p>
+<section class="py-20 bg-[#1e40af]/10">
+  <div class="container mx-auto px-6 text-center">
+    <app-title-section
+      titleSection="¿Listo para"
+      spanTitle="simplificar tu vida?"
+    />
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-12">
+      Descarga nuestra app y comienza a disfrutar de cocheras seguras cuando y
+      donde las necesites.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+      <a
+        href="#"
+        class="bg-blue-500 hover:bg-black text-white font-bold py-4 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center"
+      >
+        <i data-feather="apple" class="mr-3"></i> App Store
+      </a>
+      <a
+        href="#"
+        class="bg-blue-500 hover:bg-black text-white font-bold py-4 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center"
+      >
+        <i data-feather="play" class="mr-3"></i> Google Play
+      </a>
+    </div>
+
+    <div class="max-w-2xl mx-auto bg-gray-900 rounded-xl p-8 shadow-lg">
+      <h3 class="text-white text-2xl font-bold mb-6">Contáctanos</h3>
+      <form class="space-y-6 text-left">
+        <div>
+          <label for="name" class="text-white block mb-2 font-medium"
+            >Nombre</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="text-white w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+          />
+        </div>
+        <div>
+          <label for="email" class="text-white block mb-2 font-medium"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="text-white w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+          />
+        </div>
+        <div>
+          <label for="message" class="text-white block mb-2 font-medium"
+            >Mensaje</label
+          >
+          <textarea
+            id="message"
+            rows="4"
+            class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="text-white w-full bg-blue-500 hover:bg-blue-600 font-bold py-4 px-6 rounded-lg transition duration-300"
+        >
+          Enviar Mensaje
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
