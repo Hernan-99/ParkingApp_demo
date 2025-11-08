@@ -8,48 +8,26 @@
           seguridad y comodidad de tu vehículo.
         </p>
         <div class="space-y-8">
+          @for (feat of features; track feat.title) {
           <div class="flex items-start">
-            <div class="bg-accent/20 p-3 rounded-full mr-6">
-              <i data-feather="lock" class="w-6 h-6 text-accent"></i>
-            </div>
-            <div>
-              <h3 class="text-white text-xl font-bold mb-2">Acceso Seguro</h3>
-              <p class="text-gray-300">
-                Control de acceso mediante app con verificación en tiempo real.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <div class="bg-accent/20 p-3 rounded-full mr-6">
-              <i data-feather="camera" class="w-6 h-6 text-accent"></i>
-            </div>
-            <div>
-              <h3 class="text-white text-xl font-bold mb-2">Vigilancia 24/7</h3>
-              <p class="text-gray-300">
-                Sistema de cámaras con grabación continua y monitoreo
-                profesional.
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <div class="bg-accent/20 p-3 rounded-full mr-6">
-              <i data-feather="map-pin" class="w-6 h-6 text-accent"></i>
+            <div
+              class="bg-blue-500/20 w-14 h-14 flex justify-center items-center mr-4 rounded-full"
+            >
+              <ng-icon class="text-2xl text-blue-500" name="{{ feat.icon }}" />
             </div>
             <div>
               <h3 class="text-white text-xl font-bold mb-2">
-                Ubicaciones Estratégicas
+                {{ feat.title }}
               </h3>
               <p class="text-gray-300">
-                Cocheras en puntos clave de la ciudad para tu conveniencia.
+                {{ feat.description }}
               </p>
             </div>
           </div>
+          }
         </div>
       </div>
 
-      
       <div class="lg:w-1/2 relative">
         <div class="bg-accent/10 rounded-2xl p-2 border border-accent/20">
           <img

@@ -6,87 +6,17 @@
       spanTitle="nuestros clientes"
     />
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
       <!-- Testimonial 1 -->
-      <div
-        class="bg-gray-900/50 rounded-xl p-8 border border-gray-800 hover:border-blue-500 transition-all"
-      >
-        <div class="flex items-center mb-6">
-          <img
-            src="http://static.photos/people/200x200/1"
-            alt="Client"
-            class="w-12 h-12 rounded-full mr-4"
-          />
-          <div>
-            <h4 class="text-white font-bold">María González</h4>
-            <div class="flex text-yellow-400">
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-300 italic">
-          "Nunca más tuve que dar vueltas buscando estacionamiento. GarageZen me
-          salvó la vida en el centro de la ciudad."
-        </p>
-      </div>
-
-      <!-- Testimonial 2 -->
-      <div
-        class="bg-gray-900/50 rounded-xl p-8 border border-gray-800 hover:border-blue-500 transition-all"
-      >
-        <div class="flex items-center mb-6">
-          <img
-            src="http://static.photos/people/200x200/2"
-            alt="Client"
-            class="w-12 h-12 rounded-full mr-4"
-          />
-          <div>
-            <h4 class="text-white font-bold">Carlos Ruiz</h4>
-            <div class="flex text-yellow-400">
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-300 italic">
-          "La app es súper intuitiva y el servicio premium vale cada centavo. Mi
-          auto está más seguro que en casa."
-        </p>
-      </div>
-
-      <!-- Testimonial 3 -->
-      <div
-        class="bg-gray-900/50 rounded-xl p-8 border border-gray-800 hover:border-blue-500 transition-all"
-      >
-        <div class="flex items-center mb-6">
-          <img
-            src="http://static.photos/people/200x200/3"
-            alt="Client"
-            class="w-12 h-12 rounded-full mr-4"
-          />
-          <div>
-            <h4 class="text-white font-bold">Ana Martínez</h4>
-            <div class="flex text-yellow-400">
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-              <i data-feather="star" class="w-4 h-4 fill-current"></i>
-            </div>
-          </div>
-        </div>
-        <p class="text-gray-300 italic">
-          "Por fin encontré una solución para mi coche cuando viajo. Reservo
-          desde el aeropuerto y todo listo al llegar."
-        </p>
-      </div>
+      @for (testimonial of clientTestimonial; track testimonial.id) {
+      <app-testimonial-card
+        class="h-full flex "
+        [name]="testimonial.name"
+        [image]="testimonial.image"
+        [icon]="testimonial.icon"
+        [description]="testimonial.description"
+      />
+      }
     </div>
   </div>
 </article>
