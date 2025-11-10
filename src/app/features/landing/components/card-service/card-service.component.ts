@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-
 import {
   heroHome,
   heroClock,
   heroShieldCheck,
   heroArrowRight,
 } from '@ng-icons/heroicons/outline';
+import { ScrollEffectDirective } from '../../../../shared/directives/scrollEffect.directive';
 interface ICardService {
   id: number;
   icon: string;
@@ -17,7 +17,7 @@ interface ICardService {
 @Component({
   selector: 'app-card-service',
   standalone: true,
-  imports: [NgIcon],
+  imports: [NgIcon, ScrollEffectDirective],
   templateUrl: './card-service.component.html',
   styleUrl: './card-service.component.css',
   viewProviders: provideIcons({
