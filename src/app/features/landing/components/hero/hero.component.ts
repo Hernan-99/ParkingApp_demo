@@ -1,30 +1,11 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { gsap } from 'gsap';
+import { Component } from '@angular/core';
+import { ScrollEffectDirective } from '../../../../shared/directives/scrollEffect.directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [ScrollEffectDirective],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })
-export class HeroComponent implements AfterViewInit {
-  ngAfterViewInit() {
-    // Animación de título
-    gsap.from('.hero-title', {
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: 'power3.out',
-    });
-
-    // Animación de párrafo
-    gsap.from('.hero-subtitle', {
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      delay: 0.5,
-      ease: 'power3.out',
-    });
-  }
-}
+export class HeroComponent {}

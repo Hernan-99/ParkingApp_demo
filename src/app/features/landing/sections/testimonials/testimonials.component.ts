@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TitleSectionComponent } from '../../components/title-section/title-section.component';
 import { TestimonialCardComponent } from '../../components/testimonial-card/testimonial-card.component';
-
+import { ScrollEffectDirective } from '../../../../shared/directives/scrollEffect.directive';
 interface ITestimonials {
   id: number;
   image: string;
@@ -13,7 +13,11 @@ interface ITestimonials {
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [TitleSectionComponent, TestimonialCardComponent],
+  imports: [
+    TitleSectionComponent,
+    TestimonialCardComponent,
+    ScrollEffectDirective,
+  ],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.css',
 })

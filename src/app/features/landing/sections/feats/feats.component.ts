@@ -6,6 +6,8 @@ import {
   heroMapPin,
   heroVideoCamera,
 } from '@ng-icons/heroicons/outline';
+
+import { ScrollEffectDirective } from '../../../../shared/directives/scrollEffect.directive';
 interface IFeatures {
   icon: string;
   title: string;
@@ -14,7 +16,7 @@ interface IFeatures {
 @Component({
   selector: 'app-feats',
   standalone: true,
-  imports: [TitleSectionComponent, NgIconComponent],
+  imports: [TitleSectionComponent, NgIconComponent, ScrollEffectDirective],
   templateUrl: './feats.component.html',
   styleUrl: './feats.component.css',
   viewProviders: provideIcons({ heroLockClosed, heroVideoCamera, heroMapPin }),

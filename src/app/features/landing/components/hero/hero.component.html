@@ -1,16 +1,19 @@
 <section class="w-full h-screen bg-hero">
   <div class="bg-black/60 h-full flex flex-col justify-center items-center">
     <div class="max-w-[1200px] px-6 text-center">
-      <h1 class="hero-title text-white text-5xl font-bold mb-6">
-        Encontra la cochera <span class="text-blue-500">perfecta</span> en
-        segundos.
-      </h1>
-      <p
-        class="hero-subtitle text-white text-xl md:text-2xl mb-12 max-w-3xl mx-auto"
-      >
-        ParkingApp te permite buscar y reservar cocheras seguras en tu zona
-        cuando las necesites
-      </p>
+      <div scrollEffect [once]="false">
+        <h1 class="hero-title text-white text-5xl font-bold mb-6">
+          Encontra la cochera <span class="text-blue-500">perfecta</span> en
+          segundos.
+        </h1>
+        <p
+          class="hero-subtitle text-white text-xl md:text-2xl mb-12 max-w-3xl mx-auto"
+        >
+          ParkingApp te permite buscar y reservar cocheras seguras en tu zona
+          cuando las necesites
+        </p>
+      </div>
+
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105"

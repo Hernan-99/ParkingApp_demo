@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { ionLogoInstagram, ionLogoLinkedin } from '@ng-icons/ionicons';
+import { ScrollEffectDirective } from '../../../../shared/directives/scrollEffect.directive';
 
 interface ISocials {
   id: number;
@@ -26,7 +27,7 @@ interface IContact {
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [NgIconComponent],
+  imports: [NgIconComponent, ScrollEffectDirective],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
   viewProviders: provideIcons({ ionLogoLinkedin, ionLogoInstagram }),
